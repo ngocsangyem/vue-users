@@ -10,8 +10,8 @@
 				<div class="p-3">
 					<div class="overflow-x-auto">
 						<table class="table-auto w-full">
-							<header-table></header-table>
-							<body-table></body-table>
+							<header-table :headers="headersData"></header-table>
+							<body-table :users="users"></body-table>
 						</table>
 					</div>
 				</div>
@@ -23,6 +23,42 @@
 <script setup lang="ts">
 import HeaderTable from './HeaderTable/HeaderTable.vue';
 import BodyTable from './BodyTable/BodyTable.vue';
+import {IHeaderTable} from "@/@types/table.interface";
+
+const headersData: IHeaderTable[] = [
+	{
+		name: 'Name'
+	},
+	{
+		name: 'Email'
+	},
+	{
+		name: 'Status'
+	},
+];
+const users = [
+	{
+		"id": 7,
+		"email": "michael.lawson@reqres.in",
+		"first_name": "Michael",
+		"last_name": "Lawson",
+		"avatar": "https://reqres.in/img/faces/7-image.jpg"
+	},
+	{
+		"id": 8,
+		"email": "lindsay.ferguson@reqres.in",
+		"first_name": "Lindsay",
+		"last_name": "Ferguson",
+		"avatar": "https://reqres.in/img/faces/8-image.jpg"
+	},
+	{
+		"id": 9,
+		"email": "tobias.funke@reqres.in",
+		"first_name": "Tobias",
+		"last_name": "Funke",
+		"avatar": "https://reqres.in/img/faces/9-image.jpg"
+	},
+]
 </script>
 
 <style lang="scss">
