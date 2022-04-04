@@ -11,9 +11,14 @@
     "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@types/jest": "^27.4.1",
     "@vitejs/plugin-vue": "^2.3.0",
+    "@vue/test-utils": "^2.0.0-rc.18",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.6",
     "typescript": "^4.5.4",
     "vite": "^2.9.0",
+    "vue-jest": "^5.0.0-alpha.10",
     "vue-tsc": "^0.29.8"
   },
   "description": "A small app to manage users",
