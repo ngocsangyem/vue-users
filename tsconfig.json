@@ -18,6 +18,7 @@
 			"@/@types/*": ["./src/@types/*"],
 			"@/views/*": ["./src/views/*"],
 			"@/assets/*": ["./src/assets/*"],
+			"@/stores/*": ["./src/stores/*"],
 		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
