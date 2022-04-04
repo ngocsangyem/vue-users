@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import Table from '../../components/Table/Table.vue';
 </script>
 
 <template>
-  <h1>This is home page</h1>
+  <Table />
 </template>
