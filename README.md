@@ -21,7 +21,7 @@
 
 ## Features
 
-|                                               |     |
+| Features                                      |     |
 | --------------------------------------------- | --- |
 | [Vue3](https://vuejs.org/)                    | ✅   |
 | [Typescript](https://www.typescriptlang.org/) | ✅   |
