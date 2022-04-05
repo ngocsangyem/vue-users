@@ -15,11 +15,21 @@
   </a>
 </p>
 
-> A small app to manage users
+> A small app to manage users API from [https://reqres.in/](https://reqres.in/).
+
+## Features
+
+|                                               |     |
+| --------------------------------------------- | --- |
+| [Vue3](https://vuejs.org/)                    | ✅   |
+| [Typescript](https://www.typescriptlang.org/) | ✅   |
+| [Pinia](https://pinia.vuejs.org/)             | ✅   |
+| [Vue router](https://router.vuejs.org/)       | ✅   |
+| [Vercel](https://vercel.com/)                 | ✅   |
 
 ### 🏠 [Homepage](https://github.com/ngocsangyem/vue-users#readme)
 
-### ✨ [Demo](https://ngocsangyem.dev)
+### ✨ [Demo](https://vue-users-omega.vercel.app/)
 
 ## Install
 
@@ -33,12 +43,11 @@ npm install
 npm run dev
 ```
 
-## Run tests
+## Production
 
 ```sh
-npm test
+npm run build
 ```
-
 
 ## Recommended IDE Setup
 
@@ -57,10 +66,10 @@ You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/
 
 👤 **ngocsangyem**
 
-* Website: https://www.ngocsangyem.dev/
-* Twitter: [@ngocsangyem](https://twitter.com/ngocsangyem)
-* Github: [@ngocsangyem](https://github.com/ngocsangyem)
-* LinkedIn: [@ngocsangyem](https://linkedin.com/in/ngocsangyem)
+- Website: <https://www.ngocsangyem.dev/>
+- Twitter: [@ngocsangyem](https://twitter.com/ngocsangyem)
+- Github: [@ngocsangyem](https://github.com/ngocsangyem)
+- LinkedIn: [@ngocsangyem](https://linkedin.com/in/ngocsangyem)
 
 ## 🤝 Contributing
 
@@ -73,6 +82,11 @@ Give a ⭐️ if this project helped you!
 <a href="https://www.patreon.com/ngocsangyem">
   <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
+
+## Todo
+
+- Add tests
+- Refactor update user information
 
 ## 📝 License
 
