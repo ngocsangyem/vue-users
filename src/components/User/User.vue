@@ -1,5 +1,6 @@
 <template>
 	<user-info
+		v-if="user"
 		:user="user"
 		@toggleStatus="onToggleStatus"
 		@update="onUpdateUserInfo"
