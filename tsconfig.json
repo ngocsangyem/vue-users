@@ -20,6 +20,7 @@
 			"@/assets/*": ["./src/assets/*"],
 			"@/stores/*": ["./src/stores/*"],
 			"@/helpers/*": ["./src/helpers/*"],
+			"@/common/*": ["./src/common/*"],
 		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
