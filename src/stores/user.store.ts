@@ -7,21 +7,35 @@ export const useUserStore = defineStore('user', {
 		userList: [],
 	}),
 	getters: {
-		getUserList: (state: IUserState) => state.userList,
+		getUsersList: (state: IUserState) => state.userList,
 	},
 	actions: {
-		setUserList: (state: IUserState, payload: IUser[]) => {
-			state.userList = payload;
+		setUserList(payload: IUser[]) {
+			this.userList = payload;
 		},
-		removeUser: (state: IUserState, payload: IUser) => {
-			state.userList = state.userList.filter((user: IUser) => user.id !== payload.id);
+		removeUser(payload: IUser) {
+			this.userList = this.userList.filter((user: IUser) => user.id !== payload.id);
 		},
-		toggleUserStatus: (state: IUserState, payload: IUser) => {
-			const user = state.userList.find((user: IUser) => user.id === payload.id);
-			const id = state.userList.findIndex((user: IUser) => user.id === payload.id);
+		toggleUserStatus(payload: IUser) {
+			const { user, id } = this.findUser(payload)
 			if (user) {
 				user.status = user.status === 'active' ? 'inactive' : 'active';
-				state.userList[id].status = user.status;
+				this.userList[id].status = user.status;
+			}
+		},
+		changeUsername(payload: IUser) {
+			const { user, id } = this.findUser(payload);
+			if (user) {
+				this.userList[id].name = user.name;
+			}
+		},
+		findUser(payload: IUser) {
+			const user = this.userList.find((user: IUser) => user.id === payload.id);
+			const id = this.userList.findIndex((user: IUser) => user.id === payload.id);
+			
+			return {
+				user,
+				id
 			}
 		}
 	}

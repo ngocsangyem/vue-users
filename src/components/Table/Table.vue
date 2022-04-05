@@ -5,13 +5,13 @@
 				class="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200"
 			>
 				<header class="px-5 py-4 border-b border-gray-100">
-					<h2 class="font-semibold text-gray-800">User Data</h2>
+					<h2 class="font-semibold text-gray-800">Employees Data</h2>
 				</header>
 				<div class="p-3">
 					<div class="overflow-x-auto">
 						<table class="table-auto w-full">
 							<header-table :headers="headersData"></header-table>
-							<body-table :users="users"></body-table>
+							<body-table :users="getUsersList" @delete="onDeleteUser"></body-table>
 						</table>
 					</div>
 				</div>
@@ -21,10 +21,15 @@
 </template>
 
 <script setup lang="ts">
+import { storeToRefs } from "pinia";
 import HeaderTable from './HeaderTable/HeaderTable.vue';
 import BodyTable from './BodyTable/BodyTable.vue';
-import {IHeaderTable} from "@/@types/table.interface";
+import { useUserStore } from '@/stores/user.store';
+import { IHeaderTable } from "@/@types/table.interface";
+import { IUser } from "@/@types/user.interface";
 
+const $userStore = useUserStore();
+const { getUsersList } = storeToRefs($userStore);
 const headersData: IHeaderTable[] = [
 	{
 		name: 'Name'
@@ -35,30 +40,13 @@ const headersData: IHeaderTable[] = [
 	{
 		name: 'Status'
 	},
+	{
+		name: ''
+	},
 ];
-const users = [
-	{
-		"id": 7,
-		"email": "michael.lawson@reqres.in",
-		"first_name": "Michael",
-		"last_name": "Lawson",
-		"avatar": "https://reqres.in/img/faces/7-image.jpg"
-	},
-	{
-		"id": 8,
-		"email": "lindsay.ferguson@reqres.in",
-		"first_name": "Lindsay",
-		"last_name": "Ferguson",
-		"avatar": "https://reqres.in/img/faces/8-image.jpg"
-	},
-	{
-		"id": 9,
-		"email": "tobias.funke@reqres.in",
-		"first_name": "Tobias",
-		"last_name": "Funke",
-		"avatar": "https://reqres.in/img/faces/9-image.jpg"
-	},
-]
+const onDeleteUser = (user: IUser) => {
+	$userStore.removeUser(user);
+}
 </script>
 
 <style lang="scss">

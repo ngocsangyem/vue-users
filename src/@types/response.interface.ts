@@ -5,5 +5,5 @@ export interface IResponse {
 	par_page: number;
 	total: number;
 	total_pages: number;
-	data: IUser[]
+	data: Exclude<IUser, 'status'>[]
 }
