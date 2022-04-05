@@ -17,6 +17,8 @@
 
 > A small app to manage users API from [https://reqres.in/](https://reqres.in/).
 
+![data table gif](docs/assets/img/data_table.gif)
+
 ## Features
 
 |                                               |     |
@@ -25,6 +27,7 @@
 | [Typescript](https://www.typescriptlang.org/) | ✅   |
 | [Pinia](https://pinia.vuejs.org/)             | ✅   |
 | [Vue router](https://router.vuejs.org/)       | ✅   |
+| [Tailwind](https://tailwindcss.com/)          | ✅   |
 | [Vercel](https://vercel.com/)                 | ✅   |
 
 ### 🏠 [Homepage](https://github.com/ngocsangyem/vue-users#readme)
