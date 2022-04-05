@@ -10,11 +10,13 @@
   "dependencies": {
     "@vueuse/core": "^8.2.4",
     "pinia": "^2.0.13",
+    "uuid": "^8.3.2",
     "vue": "^3.2.25",
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
+    "@types/uuid": "^8.3.4",
     "@vitejs/plugin-vue": "^2.3.0",
     "@vue/test-utils": "^2.0.0-rc.18",
     "autoprefixer": "^10.4.4",
